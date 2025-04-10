@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subnet Analyzer</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Subnet Analyzer</h1>
+            <p>Analyze your subnet with ease!</p>
+        </header>
+
+        <main class="main-content">
+            <form id="subnetForm" class="subnet-form">
+                <div class="input-group">
+                    <label for="subnetInput">Enter a subnet address (e.g., 192.168.1.0/24):</label>
+                    <input type="text" id="subnetInput" placeholder="192.168.1.0/24" required>
+                </div>
+                <button type="submit" class="analyze-btn">Analyze Subnet</button>
+            </form>
+
+            <div id="results" class="results hidden">
+                <h2>Results</h2>
+                <div class="result-item">
+                    <span class="icon">📌</span>
+                    <p><strong>Network:</strong> <span id="network"></span></p>
+                </div>
+                <div class="result-item">
+                    <span class="icon">📚</span>
+                    <p><strong>Network Class:</strong> <span id="networkClass"></span></p>
+                </div>
+                <div class="result-item">
+                    <span class="icon">🛰</span>
+                    <p><strong>Broadcast Address:</strong> <span id="broadcast"></span></p>
+                </div>
+                <div class="result-item">
+                    <span class="icon">✅</span>
+                    <p><strong>Usable Host Range:</strong> <span id="hostRange"></span></p>
+                </div>
+                <div id="error" class="error hidden"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
